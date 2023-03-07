@@ -1,0 +1,126 @@
+:root {
+  --font-color: #383e45;
+  --font-sub-color: #7d7f81;
+  --bg-color: #ffffff;
+  --sub-bg-color: #ebeef2;
+  --fact-bg-color: #3a3a3a;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.6rem;
+  color: var(--font-color);
+}
+
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35vh;
+  z-index: -1;
+  background-image: url(../1/img/dunkleosteus.jpg);
+  background-size: 100%;
+  background-position: top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.container {
+  padding: 0;
+  margin-top: 30vh;
+}
+
+.wrapper {
+  width: 100%;
+  background-color: var(--bg-color);
+  padding: 8px 0 48px;
+  border-radius: 40px 40px 0 0;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.grap {
+  position: relative;
+  margin-bottom: 24px;
+}
+.grap::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 38px;
+  height: 3px;
+  background-color: var(--sub-bg-color);
+}
+
+.content__title h1 {
+  font-size: 3.6rem;
+}
+.content__title p {
+  color: var(--font-sub-color);
+  font-size: 1.8rem;
+}
+.content__type {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: var(--sub-bg-color);
+  border-radius: 12px;
+}
+.content__overview {
+  margin-bottom: 5rem;
+}
+.content__item {
+  text-align: center;
+}
+.content__item h2 {
+  font-size: 2rem;
+}
+.content__text {
+  font-size: 2rem;
+}
+.content__text::first-letter {
+  initial-letter: 2;
+  margin-right: 6px;
+}
+.content__source {
+  font-style: italic;
+  text-align: right;
+}
+.content__icon {
+  width: 80px;
+  height: 80px;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  text-align: center;
+  margin: -50px auto 0;
+  border: 10px solid var(--bg-color);
+}
+.content__icon img {
+  width: 50%;
+  transform: translateX(50%);
+}
+.content__info h2 {
+  font-size: 2.4rem;
+}
+.content__info img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.06);
+}
+.content__nav {
+  font-size: 1.7rem;
+}
+.content__block {
+  margin-bottom: 1rem;
+}
+.content__block h3 {
+  font-size: 1.8rem;
+}
+.content__block p {
+  font-size: 1.7rem;
+}/*# sourceMappingURL=style.css.map */

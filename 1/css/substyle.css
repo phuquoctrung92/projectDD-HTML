@@ -1,0 +1,9 @@
+.nav-tabs .nav-item .nav-link.active {
+  font-weight: 600;
+  color: var(--info);
+  background-color: var(--light);
+}
+
+.content__icon {
+  background-color: #00458f;
+}/*# sourceMappingURL=substyle.css.map */
