@@ -17,15 +17,26 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 35vh;
+  height: 36vh;
   z-index: -1;
-  background-image: url(../1/img/dunkleosteus.jpg);
   background-size: 100%;
   background-position: top;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  animation-name: zoomIn;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-delay: calc(var(--scroll) * -3s);
 }
 
+@keyframes zoomIn {
+  to {
+    background-size: 180%;
+  }
+}
 .container {
   padding: 0;
   margin-top: 30vh;
@@ -35,10 +46,23 @@ body {
   width: 100%;
   background-color: var(--bg-color);
   padding: 8px 0 48px;
-  border-radius: 40px 40px 0 0;
+  border-radius: 20px 20px 0 0;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
+  animation-name: noneRadius;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-delay: calc(var(--scroll) * -3s);
 }
 
+@keyframes noneRadius {
+  to {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
 .grap {
   position: relative;
   margin-bottom: 24px;
@@ -51,7 +75,7 @@ body {
   transform: translateX(-50%);
   width: 38px;
   height: 3px;
-  background-color: var(--sub-bg-color);
+  background-color: var(--font-sub-color);
 }
 
 .content__title h1 {
@@ -79,10 +103,10 @@ body {
 .content__item h2 {
   font-size: 2rem;
 }
-.content__text {
+.content__desc {
   font-size: 2rem;
 }
-.content__text::first-letter {
+.content__desc::first-letter {
   initial-letter: 2;
   margin-right: 6px;
 }
@@ -99,18 +123,61 @@ body {
   text-align: center;
   margin: -50px auto 0;
   border: 10px solid var(--bg-color);
+  animation-name: rotateIn;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-delay: calc(var(--scroll) * -3s);
 }
 .content__icon img {
   width: 50%;
   transform: translateX(50%);
 }
-.content__info h2 {
-  font-size: 2.4rem;
+@keyframes rotateIn {
+  0% {
+    transform: rotate(-200deg);
+    opacity: 0;
+  }
+  to {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+.content__more {
+  font-size: 3rem;
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-delay: calc(var(--scroll) * -3s);
+}
+.content__info {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-delay: calc(var(--scroll) * -3s);
 }
 .content__info img {
   width: 100%;
   border-radius: 12px;
   box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.06);
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
 }
 .content__nav {
   font-size: 1.7rem;

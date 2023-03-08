@@ -1,3 +1,9 @@
+:root{
+    --primary-color: #007bff;
+}
+.banner{
+    background-image: url(../img/dunkleosteus.jpg);
+}
 .nav-tabs{
     .nav-item{
         .nav-link.active{
@@ -8,6 +14,11 @@
     }
 }
 .content{
+    &__desc{
+        &::first-letter{
+            color: var(--primary-color);
+        }
+    }
     &__icon{
         background-color: #00458f;
       }
