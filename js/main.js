@@ -8,3 +8,10 @@ window.addEventListener(
   },
   false
 );
+$(".content__slide").slick({
+  infinite: false,
+  adaptiveHeight: true,
+  arrows: true,
+  prevArrow: $(".content__prev"),
+  nextArrow: $(".content__next"),
+})

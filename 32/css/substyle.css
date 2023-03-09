@@ -3,11 +3,6 @@
   --secondary-color: #b8e699;
 }
 
-.banner {
-  background-image: url(../img/velociraptor-new.jpg);
-  background-size: 118%;
-}
-
 .nav-tabs .nav-item .nav-link.active {
   font-weight: 600;
   color: var(--primary-color);

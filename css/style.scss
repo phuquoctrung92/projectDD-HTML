@@ -2,64 +2,55 @@
   --font-color: #383e45;
   --font-sub-color: #7d7f81;
   --bg-color: #ffffff;
-  --sub-bg-color: #ebeef2;
-  --fact-bg-color: #3a3a3a;
+  --sub-bg-color: #f1f1f1;
+  --separator-color: #c2c2c2;
 }
+
 @mixin animateSetup {
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-play-state: paused;
   animation-iteration-count: 1;
   animation-fill-mode: both;
-  animation-delay: calc(var(--scroll) * -3s);
 }
+
 body {
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: var(--font-color);
 }
 
 .banner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 36vh;
+  position: relative;
   z-index: -1;
-  background-size: 100%;
-  background-position: top;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  animation-name: zoomIn;
-  @include animateSetup();
-}
-@keyframes zoomIn {
-  to {
-    background-size: 180%;
+  overflow: hidden;
+  img{
+    width: 100%;
+    animation-name: zoomBG;
+    animation-delay: calc(var(--scroll) * -1s);
+    @include animateSetup();
   }
 }
+
 .container {
   padding: 0;
-  margin-top: 30vh;
+  margin-top: -3vh;
 }
+
 .wrapper {
   width: 100%;
   background-color: var(--bg-color);
   padding: 8px 0 48px;
-  border-radius: 20px 20px 0 0;
+  border-radius: 16px 16px 0 0;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
   animation-name: noneRadius;
+  animation-delay: calc(var(--scroll) * -1s);
   @include animateSetup();
 }
-@keyframes noneRadius {
-  to {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
-}
+
 .grap {
   position: relative;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   &::before {
     content: "";
     display: block;
@@ -72,13 +63,22 @@ body {
   }
 }
 .content {
+
+  &__top{
+    padding: 0 1.5rem;
+    margin-bottom: 5rem;
+  }
+
   &__title {
+    margin-bottom: 1.5rem;
     h1 {
-      font-size: 3.6rem;
+      font-size: 2.8rem; 
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     p {
-      color: var(--font-sub-color);
-      font-size: 1.8rem;
+      color: var(--font-color);
+      font-size: 1.6rem;
     }
   }
 
@@ -90,21 +90,19 @@ body {
     gap: 20px;
     background-color: var(--sub-bg-color);
     border-radius: 12px;
-  }
-
-  &__overview {
-    margin-bottom: 5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   &__item {
     text-align: center;
     h2 {
-      font-size: 2rem;
+      font-size: 1.6rem;
     }
   }
 
   &__desc {
-    font-size: 2rem;
+    font-size: 1.6rem;
     &::first-letter {
       initial-letter: 2;
       margin-right: 6px;
@@ -114,6 +112,19 @@ body {
   &__source {
     font-style: italic;
     text-align: right;
+    color: var(--font-sub-color);
+  }
+
+  &__separator{
+    margin-bottom: 1.5rem;
+    hr{
+      width: 0;
+      opacity: 0;
+      border-color: var(--separator-color);
+      animation-name: revealX;
+      animation-delay: calc(var(--scroll) * -2.5s);
+      @include animateSetup();
+    }
   }
 
   &__icon {
@@ -125,7 +136,8 @@ body {
     text-align: center;
     margin: -50px auto 0;
     border: 10px solid var(--bg-color);
-    animation-name: rotateIn;
+    animation-name: spinIn;
+    animation-delay: calc(var(--scroll) * -2.5s);
     @include animateSetup();
 
     img {
@@ -133,56 +145,113 @@ body {
       transform: translateX(50%);
     }
   }
-  @keyframes rotateIn {
-    0% {
-      -webkit-transform: rotate(-200deg);
-      transform: rotate(-200deg);
-      opacity: 0;
-    }
-    to {
-      -webkit-transform: translateZ(0);
-      transform: translateZ(0);
-      opacity: 1;
-    }
-  }
-  
+
+    
   &__more {
-    font-size: 3rem;
-    animation-name: fadeInUp;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    animation-name: fadeUp;
+    animation-delay: calc(var(--scroll) * -2.5s);
     @include animateSetup();
   }
 
   &__info {
-    animation-name: fadeInUp;
+    position: relative;
+    background-color: var(--sub-bg-color);
+    animation-name: fadeUp;
+    animation-delay: calc(var(--scroll) * -3s);
     @include animateSetup();
+  }
+  &__nav {
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    button {
+      border: transparent;
+      background: var(--sub-bg-color);
+      padding: 0 1.5rem;
+      &:hover{
+        color: var(--primary-color);
+      }
+      &:focus{
+        outline: none;
+        color: var(--primary-color);
+      }
+    }
+  }
+  &__box{
+    padding: 1.5rem;
+  }
+  &__subject{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  &__paragraph {
+    margin-bottom: 2rem;
+    h3 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
     img {
       width: 100%;
       border-radius: 12px;
       box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.06);
+      margin: 1.5rem auto;
     }
   }
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 50px, 0);
-      transform: translate3d(0, 50px, 0);
-    }
-    to {
-      opacity: 1;
-      -webkit-transform: translateZ(0);
-      transform: translateZ(0);
-    }
+}
+
+@keyframes zoomBG {
+  to {
+    transform: scale(2);
   }
-  &__nav {
-    font-size: 1.7rem;
+}
+
+@keyframes noneRadius {
+  to {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
-  &__block {
-    margin-bottom: 1rem;
-    h3 {
-      font-size: 1.8rem;
-    }
-    p {
-      font-size: 1.7rem;
-    }
+}
+
+@keyframes revealX {
+  to{
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@keyframes spinIn {
+  0% {
+    -webkit-transform: rotate(-200deg);
+    transform: rotate(-200deg);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0);
+    transform: translate3d(0, 50px, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }

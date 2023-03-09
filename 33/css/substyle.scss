@@ -1,12 +1,13 @@
 :root {
-  --primary-color: #007bff;
+  --primary-color: #8C6845;
+  --secondary-color: #f5dfc7;
 }
 
 .nav-tabs {
   .nav-item {
     .nav-link.active {
       font-weight: 600;
-      color: var(--info);
+      color: var(--primary-color);
       background-color: var(--light);
     }
   }
@@ -18,7 +19,12 @@
       color: var(--primary-color);
     }
   }
+  &__text {
+    &--primary {
+      color: var(--primary-color);
+    }
+  }
   &__icon {
-    background-color: #00458f;
+    background-color: var(--secondary-color);
   }
 }
