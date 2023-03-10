@@ -6,6 +6,12 @@
   --separator-color: #c2c2c2;
 }
 
+@mixin bp($bp){
+  @media screen and (min-width: $bp) {
+    @content;
+  }
+}
+
 @mixin animateSetup {
   animation-duration: 1s;
   animation-timing-function: linear;
@@ -17,6 +23,7 @@
 body {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.4rem;
+  line-height: 1.6;
   color: var(--font-color);
 }
 
@@ -24,11 +31,20 @@ body {
   position: relative;
   z-index: -1;
   overflow: hidden;
+
   img{
     width: 100%;
     animation-name: zoomBG;
     animation-delay: calc(var(--scroll) * -1s);
     @include animateSetup();
+  
+    @include bp(568px){
+      height: 80vh;
+      object-fit: cover;
+    }
+    @include bp(768px){
+      height: 45vh;
+    }
   }
 }
 
@@ -46,11 +62,20 @@ body {
   animation-name: noneRadius;
   animation-delay: calc(var(--scroll) * -1s);
   @include animateSetup();
+  
+  @include bp(768px){
+    padding-top: 16px;
+  }
 }
 
 .grap {
   position: relative;
   margin-bottom: 1.5rem;
+
+  @include bp(768px){
+    margin-bottom: 3rem;
+  }
+
   &::before {
     content: "";
     display: block;
@@ -60,6 +85,11 @@ body {
     width: 38px;
     height: 3px;
     background-color: var(--font-sub-color);
+
+    @include bp(768px){
+      width: calc(38px * 1.5);
+      height: calc(3px * 1.5);
+    }
   }
 }
 .content {
@@ -67,18 +97,49 @@ body {
   &__top{
     padding: 0 1.5rem;
     margin-bottom: 5rem;
+
+    @include bp(768px){
+      padding-left: 3rem;
+      padding-right: 3rem;
+      margin-bottom: 10rem;
+    }
   }
 
   &__title {
     margin-bottom: 1.5rem;
+
+    @include bp(768px){
+      margin-bottom: 3rem;
+    }
+
     h1 {
       font-size: 2.8rem; 
       overflow: hidden;
       text-overflow: ellipsis;
+
+      @include bp(360px){
+        font-size: 3.2rem;
+      }
+      @include bp(412px){
+        font-size: 3.4rem;
+      }
+      @include bp(768px){
+        font-size: calc(3.4rem * 1.5);
+      }
     }
     p {
       color: var(--font-color);
       font-size: 1.6rem;
+
+      @include bp(360px){
+        font-size: 2rem;
+      }
+      @include bp(412px){
+        font-size: 2.2rem;
+      }
+      @include bp(768px){
+        font-size: calc(2.2rem * 1.5);
+      }
     }
   }
 
@@ -89,15 +150,46 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     background-color: var(--sub-bg-color);
-    border-radius: 12px;
+    border-radius: 8px;
     padding: 1rem;
     margin-bottom: 1.5rem;
+    
+    @include bp(360px){
+      gap: 30px;
+      padding: 1.5rem;
+    }
+    @include bp(768px){      
+      gap: calc(30px * 1.5);
+      padding: calc(1.5rem * 1.5);
+      margin-bottom: 3rem;
+    }
   }
 
   &__item {
     text-align: center;
+    p{      
+      @include bp(360px){
+        font-size: 1.6rem;
+      }
+      @include bp(412px){
+        font-size: 1.8rem;
+      }
+      @include bp(768px){      
+        font-size: calc(1.8rem * 1.5);
+      }
+    }
     h2 {
       font-size: 1.6rem;
+
+      @include bp(360px){
+        font-size: 1.8rem;
+      }
+      @include bp(412px){
+        font-size: 2rem;
+      }
+      @include bp(768px){      
+        font-size: calc(2rem * 1.5);
+      }
     }
   }
 
@@ -106,6 +198,23 @@ body {
     &::first-letter {
       initial-letter: 2;
       margin-right: 6px;
+      
+      @include bp(360px){
+        margin-right: 10px;
+      }
+      @include bp(768px){      
+        margin-right: 15px;
+      }
+    }
+
+    @include bp(360px){
+      font-size: 2rem;
+    }
+    @include bp(412px){
+      font-size: 2.2rem;
+    }
+    @include bp(768px){      
+      font-size: calc(2.2rem * 1.5);
     }
   }
 
@@ -113,10 +222,21 @@ body {
     font-style: italic;
     text-align: right;
     color: var(--font-sub-color);
+    @include bp(360px){
+      font-size: 1.8rem;
+    }
+    @include bp(768px){      
+      font-size: calc(1.8rem * 1.5);
+    }
   }
 
   &__separator{
     margin-bottom: 1.5rem;
+
+    @include bp(768px){
+      margin-bottom: 3rem;
+    }
+
     hr{
       width: 0;
       opacity: 0;
@@ -140,6 +260,12 @@ body {
     animation-delay: calc(var(--scroll) * -2.5s);
     @include animateSetup();
 
+    @include bp(768px){
+      width: 120px;
+      height: 120px;
+      margin-top: -70px;
+    }
+
     img {
       width: 50%;
       transform: translateX(50%);
@@ -154,6 +280,17 @@ body {
     animation-name: fadeUp;
     animation-delay: calc(var(--scroll) * -2.5s);
     @include animateSetup();
+    
+    @include bp(360px){
+      font-size: 2.4rem;
+    }
+    @include bp(412px){
+      font-size: 2.6rem;
+    }
+    @include bp(768px){
+      font-size: 5.2rem;
+      margin-bottom: 3rem;
+    }
   }
 
   &__info {
@@ -163,6 +300,7 @@ body {
     animation-delay: calc(var(--scroll) * -3s);
     @include animateSetup();
   }
+
   &__nav {
     position: absolute;
     top: 1.5rem;
@@ -171,6 +309,11 @@ body {
     z-index: 1;
     display: flex;
     justify-content: space-between;
+
+    @include bp(768px){
+      top: 3rem;
+    }
+
     button {
       border: transparent;
       background: var(--sub-bg-color);
@@ -182,30 +325,75 @@ body {
         outline: none;
         color: var(--primary-color);
       }
+      
+      @include bp(360px){
+        font-size: 1.8rem;
+      }
+      @include bp(768px){
+        font-size: 3.6rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+      }
     }
   }
   &__box{
     padding: 1.5rem;
+
+    @include bp(768px){
+      padding: 3rem;
+    }
   }
   &__subject{
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
     margin-bottom: 1.5rem;
+    
+    @include bp(360px){
+      font-size: 1.8rem;
+    }
+    @include bp(768px){
+      font-size: 3.6rem;
+      margin-bottom: 3rem;
+    }
   }
   
   &__paragraph {
     margin-bottom: 2rem;
+
+    @include bp(768px){
+      margin-bottom: 4rem;
+    }
+    
     h3 {
       font-size: 1.6rem;
       font-weight: 600;
       margin-bottom: 4px;
+      
+      @include bp(360px){
+        font-size: 2rem;
+      }
+      @include bp(768px){
+        font-size: 4rem;
+      }
+    }
+    p{
+      @include bp(360px){
+        font-size: 1.8rem;
+      }
+      @include bp(768px){
+        font-size: 3.6rem;
+      }
     }
     img {
-      width: 100%;
-      border-radius: 12px;
+      border-radius: 8px;
       box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.06);
       margin: 1.5rem auto;
+
+      @include bp(768px){
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+      }
     }
   }
 }
