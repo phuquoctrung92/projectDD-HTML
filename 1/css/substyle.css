@@ -1,16 +1,4 @@
 :root {
-  --primary-color: #007bff;
-}
-
-.nav-tabs .nav-item .nav-link.active {
-  font-weight: 600;
-  color: var(--info);
-  background-color: var(--light);
-}
-
-.content__desc::first-letter {
-  color: var(--primary-color);
-}
-.content__icon {
-  background-color: #00458f;
+  --primary-color: #0066ff;
+  --secondary-color: #b2d1ff;
 }/*# sourceMappingURL=substyle.css.map */

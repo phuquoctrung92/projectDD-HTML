@@ -1,23 +1,15 @@
 :root {
   --font-color: #383e45;
-  --font-sub-color: #7d7f81;
+  --font-sub-color: #908f8f;
   --bg-color: #ffffff;
   --sub-bg-color: #f1f1f1;
   --separator-color: #c2c2c2;
 }
 
-@mixin bp($bp){
+@mixin bp($bp) {
   @media screen and (min-width: $bp) {
     @content;
   }
-}
-
-@mixin animateSetup {
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-play-state: paused;
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
 }
 
 body {
@@ -28,21 +20,25 @@ body {
 }
 
 .banner {
-  position: relative;
-  z-index: -1;
   overflow: hidden;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
 
-  img{
+  @include bp(576px) {
+    position: relative;
+    z-index: -1;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  img {
     width: 100%;
-    animation-name: zoomBG;
-    animation-delay: calc(var(--scroll) * -1s);
-    @include animateSetup();
-  
-    @include bp(568px){
-      height: 80vh;
+
+    @include bp(568px) {
+      height: 70vh;
       object-fit: cover;
     }
-    @include bp(768px){
+    @include bp(768px) {
       height: 45vh;
     }
   }
@@ -50,20 +46,24 @@ body {
 
 .container {
   padding: 0;
-  margin-top: -3vh;
+
+  @include bp(576px) {
+    margin-top: -3vh;
+  }
 }
 
 .wrapper {
   width: 100%;
   background-color: var(--bg-color);
-  padding: 8px 0 48px;
-  border-radius: 16px 16px 0 0;
+  padding: 1.5rem 0 4.8rem;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
-  animation-name: noneRadius;
-  animation-delay: calc(var(--scroll) * -1s);
-  @include animateSetup();
-  
-  @include bp(768px){
+
+  @include bp(576px) {
+    padding-top: 0.8rem;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  @include bp(768px) {
     padding-top: 16px;
   }
 }
@@ -71,8 +71,12 @@ body {
 .grap {
   position: relative;
   margin-bottom: 1.5rem;
+  display: none;
 
-  @include bp(768px){
+  @include bp(576px) {
+    display: block;
+  }
+  @include bp(768px) {
     margin-bottom: 3rem;
   }
 
@@ -86,19 +90,18 @@ body {
     height: 3px;
     background-color: var(--font-sub-color);
 
-    @include bp(768px){
+    @include bp(768px) {
       width: calc(38px * 1.5);
       height: calc(3px * 1.5);
     }
   }
 }
 .content {
-
-  &__top{
+  &__top {
     padding: 0 1.5rem;
     margin-bottom: 5rem;
 
-    @include bp(768px){
+    @include bp(768px) {
       padding-left: 3rem;
       padding-right: 3rem;
       margin-bottom: 10rem;
@@ -108,87 +111,147 @@ body {
   &__title {
     margin-bottom: 1.5rem;
 
-    @include bp(768px){
+    @include bp(768px) {
       margin-bottom: 3rem;
     }
 
     h1 {
-      font-size: 2.8rem; 
+      font-size: 2.5rem;
+      color: var(--primary-color);
       overflow: hidden;
       text-overflow: ellipsis;
 
-      @include bp(360px){
+      @include bp(360px) {
         font-size: 3.2rem;
       }
-      @include bp(412px){
+      @include bp(412px) {
         font-size: 3.4rem;
       }
-      @include bp(768px){
+      @include bp(768px) {
         font-size: calc(3.4rem * 1.5);
       }
     }
-    p {
-      color: var(--font-color);
-      font-size: 1.6rem;
+    q {
+      color: var(--font-sub-color);
+      font-size: 1.5rem;
+      font-style: italic;
+      font-weight: 600;
 
-      @include bp(360px){
-        font-size: 2rem;
+      @include bp(360px) {
+        font-size: 1.7rem;
       }
-      @include bp(412px){
-        font-size: 2.2rem;
+      @include bp(412px) {
+        font-size: 1.9rem;
       }
-      @include bp(768px){
-        font-size: calc(2.2rem * 1.5);
+      @include bp(768px) {
+        font-size: calc(1.9rem * 1.5);
       }
     }
   }
 
-  &__type {
+  &__general{
+    margin-bottom: 1.5rem;
+    @include bp(768px) {
+      margin-bottom: 3rem;
+    }
+  }
+  
+  &__subject{
+    font-size: 1.7rem;
+    @include bp(360px) {
+      font-size: 1.9rem;
+    }
+    @include bp(412px) {
+      font-size: 2.1rem;
+    }
+    @include bp(768px) {
+      font-size: calc(2.1rem * 1.5);
+    }
+  }
+
+  &__type,&__appear {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px;
-    background-color: var(--sub-bg-color);
-    border-radius: 8px;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-    
-    @include bp(360px){
-      gap: 30px;
-      padding: 1.5rem;
+    gap: 10px;
+    margin-top: 1rem;
+
+    @include bp(768px) {
+      margin-top: 3rem;
     }
-    @include bp(768px){      
-      gap: calc(30px * 1.5);
-      padding: calc(1.5rem * 1.5);
-      margin-bottom: 3rem;
+    @include bp(576px) {
+      margin-top: 2rem;
     }
   }
 
   &__item {
+    flex: 1;
     text-align: center;
-    p{      
-      @include bp(360px){
-        font-size: 1.6rem;
-      }
-      @include bp(412px){
-        font-size: 1.8rem;
-      }
-      @include bp(768px){      
-        font-size: calc(1.8rem * 1.5);
-      }
-    }
-    h2 {
-      font-size: 1.6rem;
+    background-color: var(--sub-bg-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 1rem;    
+  }
 
-      @include bp(360px){
-        font-size: 1.8rem;
-      }
-      @include bp(412px){
+  &__caption {
+    color: var(--font-sub-color);
+    @include bp(360px) {
+      font-size: 1.6rem;
+    }
+    @include bp(412px) {
+      font-size: 1.8rem;
+    }
+    @include bp(768px) {
+      font-size: calc(1.8rem * 1.5);
+    }
+  }
+  
+  &__detail {
+    font-weight: 600;
+    color: var(--primary-color);
+    span{
+      font-size: 1.8rem;
+      @include bp(360px) {
         font-size: 2rem;
       }
-      @include bp(768px){      
-        font-size: calc(2rem * 1.5);
+      @include bp(412px) {
+        font-size: 2.2rem;
+      }
+      @include bp(768px) {
+        font-size: calc(2.2rem * 1.5);
+      }
+    }
+
+    @include bp(360px) {
+      font-size: 1.8rem;
+    }
+    @include bp(412px) {
+      font-size: 2rem;
+    }
+    @include bp(768px) {
+      font-size: calc(2rem * 1.5);
+    }
+  }
+
+  &__distribution{
+    margin-bottom: 1.5rem;
+
+    @include bp(768px) {
+      margin-bottom: 3rem;
+    }
+
+    p{
+      font-size: 1.6rem;
+
+      @include bp(360px) {
+        font-size: 2rem;
+      }
+      @include bp(412px) {
+        font-size: 2.2rem;
+      }
+      @include bp(768px) {
+        font-size: calc(2.2rem * 1.5);
       }
     }
   }
@@ -197,23 +260,24 @@ body {
     font-size: 1.6rem;
     &::first-letter {
       initial-letter: 2;
+      color: var(--primary-color);
       margin-right: 6px;
-      
-      @include bp(360px){
+
+      @include bp(360px) {
         margin-right: 10px;
       }
-      @include bp(768px){      
+      @include bp(768px) {
         margin-right: 15px;
       }
     }
 
-    @include bp(360px){
+    @include bp(360px) {
       font-size: 2rem;
     }
-    @include bp(412px){
+    @include bp(412px) {
       font-size: 2.2rem;
     }
-    @include bp(768px){      
+    @include bp(768px) {
       font-size: calc(2.2rem * 1.5);
     }
   }
@@ -222,28 +286,23 @@ body {
     font-style: italic;
     text-align: right;
     color: var(--font-sub-color);
-    @include bp(360px){
+    @include bp(360px) {
       font-size: 1.8rem;
     }
-    @include bp(768px){      
+    @include bp(768px) {
       font-size: calc(1.8rem * 1.5);
     }
   }
 
-  &__separator{
-    margin-bottom: 1.5rem;
+  &__separator {
+    margin-bottom: 1rem;
 
-    @include bp(768px){
-      margin-bottom: 3rem;
+    @include bp(768px) {
+      margin-bottom: 2rem;
     }
 
-    hr{
-      width: 0;
-      opacity: 0;
+    hr {
       border-color: var(--separator-color);
-      animation-name: revealX;
-      animation-delay: calc(var(--scroll) * -2.5s);
-      @include animateSetup();
     }
   }
 
@@ -251,16 +310,13 @@ body {
     width: 80px;
     height: 80px;
     display: grid;
-    place-content: center;
+    place-content: center;background-color: var(--secondary-color);
     border-radius: 50%;
     text-align: center;
     margin: -50px auto 0;
     border: 10px solid var(--bg-color);
-    animation-name: spinIn;
-    animation-delay: calc(var(--scroll) * -2.5s);
-    @include animateSetup();
 
-    @include bp(768px){
+    @include bp(768px) {
       width: 120px;
       height: 120px;
       margin-top: -70px;
@@ -272,116 +328,56 @@ body {
     }
   }
 
-    
   &__more {
     font-size: 2.2rem;
     text-align: center;
     margin-bottom: 1.5rem;
-    animation-name: fadeUp;
-    animation-delay: calc(var(--scroll) * -2.5s);
-    @include animateSetup();
-    
-    @include bp(360px){
+
+    @include bp(360px) {
       font-size: 2.4rem;
     }
-    @include bp(412px){
+    @include bp(412px) {
       font-size: 2.6rem;
     }
-    @include bp(768px){
+    @include bp(768px) {
       font-size: 5.2rem;
       margin-bottom: 3rem;
     }
   }
 
   &__info {
-    position: relative;
-    background-color: var(--sub-bg-color);
-    animation-name: fadeUp;
-    animation-delay: calc(var(--scroll) * -3s);
-    @include animateSetup();
-  }
-
-  &__nav {
-    position: absolute;
-    top: 1.5rem;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
-
-    @include bp(768px){
-      top: 3rem;
-    }
-
-    button {
-      border: transparent;
-      background: var(--sub-bg-color);
-      padding: 0 1.5rem;
-      &:hover{
-        color: var(--primary-color);
-      }
-      &:focus{
-        outline: none;
-        color: var(--primary-color);
-      }
-      
-      @include bp(360px){
-        font-size: 1.8rem;
-      }
-      @include bp(768px){
-        font-size: 3.6rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
-      }
-    }
-  }
-  &__box{
     padding: 1.5rem;
+    background-color: var(--sub-bg-color);
 
-    @include bp(768px){
+    @include bp(768px) {
       padding: 3rem;
     }
   }
-  &__subject{
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 1.5rem;
-    
-    @include bp(360px){
-      font-size: 1.8rem;
-    }
-    @include bp(768px){
-      font-size: 3.6rem;
-      margin-bottom: 3rem;
-    }
-  }
-  
+
   &__paragraph {
     margin-bottom: 2rem;
 
-    @include bp(768px){
+    @include bp(768px) {
       margin-bottom: 4rem;
     }
-    
+
     h3 {
       font-size: 1.6rem;
       font-weight: 600;
       margin-bottom: 4px;
-      
-      @include bp(360px){
+
+      @include bp(360px) {
         font-size: 2rem;
       }
-      @include bp(768px){
+      @include bp(768px) {
         font-size: 4rem;
       }
     }
-    p{
-      @include bp(360px){
+    p {
+      @include bp(360px) {
         font-size: 1.8rem;
       }
-      @include bp(768px){
+      @include bp(768px) {
         font-size: 3.6rem;
       }
     }
@@ -390,56 +386,10 @@ body {
       box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.06);
       margin: 1.5rem auto;
 
-      @include bp(768px){
+      @include bp(768px) {
         margin-top: 3rem;
         margin-bottom: 3rem;
       }
     }
-  }
-}
-
-@keyframes zoomBG {
-  to {
-    transform: scale(2);
-  }
-}
-
-@keyframes noneRadius {
-  to {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
-}
-
-@keyframes revealX {
-  to{
-    opacity: 1;
-    width: 100%;
-  }
-}
-
-@keyframes spinIn {
-  0% {
-    -webkit-transform: rotate(-200deg);
-    transform: rotate(-200deg);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 50px, 0);
-    transform: translate3d(0, 50px, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
   }
 }
