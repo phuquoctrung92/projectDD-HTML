@@ -175,15 +175,8 @@ body {
     align-items: stretch;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 1rem;
-
-    @include bp(768px) {
-      margin-top: 3rem;
-    }
-    @include bp(576px) {
-      margin-top: 2rem;
-    }
+    gap: 6px;
+    margin-top: .6rem;
   }
 
   &__item {
@@ -195,46 +188,47 @@ body {
     background-color: var(--sub-bg-color);
     border: 1px solid var(--secondary-color);
     border-radius: 8px;
-    padding: 1rem;    
+    padding: .6rem;    
   }
 
   &__caption {
-    color: var(--font-sub-color);
+    font-size: 1rem;
     @include bp(360px) {
-      font-size: 1.6rem;
+      font-size: 1.2rem;
     }
     @include bp(412px) {
+      font-size: 1.4rem;
+    }
+    @include bp(768px) {
       font-size: 1.8rem;
     }
-    // @include bp(768px) {
-    //   font-size: calc(1.8rem * 1.5);
-    // }
   }
   
   &__detail {
+    font-size: 1.1rem;
     font-weight: 600;
     color: var(--primary-color);
     @include bp(360px) {
-      font-size: 1.6rem;
+      font-size: 1.3rem;
     }
     @include bp(412px) {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
-    // @include bp(768px) {
-    //   font-size: calc(2rem * 1.5);
-    // }
+    @include bp(768px) {
+      font-size: 1.9rem;
+    }
 
     span{
-      font-size: 1.6rem;
+      font-size: 1.3rem;
       @include bp(360px) {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
       }
       @include bp(412px) {
-        font-size: 2rem;
+        font-size: 1.7rem;
       }
-      // @include bp(768px) {
-      //   font-size: calc(2.2rem * 1.5);
-      // }
+      @include bp(768px) {
+        font-size: 2.1rem;
+      }
     }
   }
 
