@@ -8,7 +8,7 @@
 	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#E6E7E8;stroke:#FFFFFF;stroke-width:9.301216e-02;stroke-miterlimit:1.2402;}
 	.st3{fill:#E6E7E8;fill-opacity:0;}
 	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#E6E7E8;fill-opacity:0;}
-	.st5{fill:#CE0D03;stroke:#FAE6C9;stroke-width:5;stroke-miterlimit:10;}
+	.st5{fill:#008845;stroke:#BCE1C2;stroke-width:5;stroke-miterlimit:10;}
 </style>
 <g id="map" inkscape:version="0.48.0 r9654" sodipodi:docname="BlankMap-World6.svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg">
 	
@@ -8781,8 +8781,8 @@
 	</g>
 </g>
 <g id="dots">
-	<circle class="st5" cx="420" cy="139.3" r="12.1"/>
-	<circle class="st5" cx="389" cy="150.7" r="12.1"/>
-	<circle class="st5" cx="405.2" cy="109.8" r="12.1"/>
+	<circle class="st5" cx="350.2" cy="64.1" r="12.1"/>
+	<circle class="st5" cx="272.1" cy="114.6" r="12.1"/>
+	<circle class="st5" cx="148" cy="82.4" r="12.1"/>
 </g>
 </svg>
