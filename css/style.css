@@ -122,7 +122,8 @@ body {
 }
 .content__title h1 {
   font-family: "Jurassic Park";
-  font-size: 5.4rem;
+  font-size: 4.8rem;
+  letter-spacing: 0.1rem;
   line-height: 0.7;
   font-weight: normal;
   color: var(--primary-color);
@@ -131,12 +132,13 @@ body {
 }
 @media screen and (min-width: 360px) {
   .content__title h1 {
-    font-size: 6rem;
+    font-size: 5.4rem;
   }
 }
 @media screen and (min-width: 412px) {
   .content__title h1 {
-    font-size: 6.6rem;
+    font-size: 6rem;
+    letter-spacing: 0.2rem;
   }
 }
 .content__title q {
@@ -304,7 +306,7 @@ body {
   font-family: "Jurassic Park";
   initial-letter: 2;
   color: var(--primary-color);
-  margin-right: 4px;
+  margin-right: 3px;
 }
 @media screen and (min-width: 360px) {
   .content__desc--bigletter::first-letter {
@@ -384,7 +386,6 @@ body {
 .content__more {
   font-size: 1.6rem;
   text-align: center;
-  padding: 0 1rem;
   margin-bottom: 1.5rem;
 }
 @media screen and (min-width: 360px) {
@@ -401,6 +402,7 @@ body {
   font-family: "Jurassic Park";
   font-weight: normal;
   font-size: 3rem;
+  letter-spacing: 0.1rem;
   color: var(--primary-color);
 }
 @media screen and (min-width: 360px) {
@@ -411,6 +413,7 @@ body {
 @media screen and (min-width: 412px) {
   .content__more span {
     font-size: 4.2rem;
+    letter-spacing: 0.2rem;
   }
 }
 .content__paragraph {
