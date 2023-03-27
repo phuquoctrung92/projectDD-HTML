@@ -125,21 +125,16 @@ body {
     }
 
     h1 {
-      font-family: 'Jurassic Park';
-      font-size: 4.8rem;
-      letter-spacing: .1rem;
-      line-height: 0.7;
-      font-weight: normal;
+      font-size: 2.4rem;
       color: var(--primary-color);
       overflow: hidden;
       text-overflow: ellipsis;
 
       @include bp(360px) {
-        font-size: 5.4rem;
+        font-size: 2.8rem;
       }
       @include bp(412px) {
-        font-size: 6rem;
-        letter-spacing: .2rem;
+        font-size: 3.2rem;
       }
     }
     q {
@@ -258,7 +253,16 @@ body {
         width: 1.8rem;
       }
       + img {
-        margin-left: .5rem;
+        margin-left: .1rem;
+        @include bp(360px) {
+          margin-left: .2rem;
+        }
+        @include bp(446px) {
+          margin-left: .3rem;
+        }
+        @include bp(768px) {
+          margin-left: .4rem;
+        }
       }
     }
   }
@@ -280,7 +284,6 @@ body {
     }
     &--bigletter {
       &::first-letter {
-        font-family: 'Jurassic Park';
         initial-letter: 2;
         color: var(--primary-color);
         margin-right: 3px;
@@ -367,19 +370,7 @@ body {
     }
 
     span {
-      font-family: 'Jurassic Park';
-      font-weight: normal;
-      font-size: 3rem;
-      letter-spacing: .1rem;
       color: var(--primary-color);
-
-      @include bp(360px) {
-        font-size: 3.6rem;
-      }
-      @include bp(412px) {
-        font-size: 4.2rem;
-        letter-spacing: .2rem;
-      }
     }
   }
 

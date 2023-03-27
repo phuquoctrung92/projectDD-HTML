@@ -2,3 +2,28 @@
   --primary-color: #008845;
   --secondary-color: #bce1c2;
 }
+
+@mixin bp($bp) {
+  @media screen and (min-width: $bp) {
+    @content;
+  }
+}
+
+.content {
+  &__type {
+    & > .content__item {
+      & > .content__detail {
+        @include bp(360px) {
+          font-size: 1.1rem;
+        }
+        @include bp(446px) {
+          font-size: 1.4rem;
+        }
+        @include bp(768px) {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
+
