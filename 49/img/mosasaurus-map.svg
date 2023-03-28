@@ -8,7 +8,10 @@
 	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#E6E7E8;stroke:#FFFFFF;stroke-width:9.301216e-02;stroke-miterlimit:1.2402;}
 	.st3{fill:#E6E7E8;fill-opacity:0;}
 	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#E6E7E8;fill-opacity:0;}
-	.st5{fill:#004BBC;stroke:#BDCDE9;stroke-width:5;stroke-miterlimit:10;}
+	.st5{fill:#004BBC;stroke:#BDCDE9;stroke-width:5.0003;stroke-miterlimit:10.0006;}
+	.st6{fill:#004BBC;stroke:#BDCDE9;stroke-width:5.0005;stroke-miterlimit:10.001;}
+	.st7{fill:#004BBC;stroke:#BDCDE9;stroke-width:5.0004;stroke-miterlimit:10.0008;}
+	.st8{fill:#004BBC;stroke:#BDCDE9;stroke-width:5.0004;stroke-miterlimit:10.0009;}
 </style>
 <g id="map_1_">
 	
@@ -8811,5 +8814,19 @@
 		</g>
 	</g>
 </g>
-<ellipse transform="matrix(0.1602 -0.9871 0.9871 0.1602 129.8814 769.0573)" class="st5" cx="516.9" cy="308.2" rx="12.1" ry="12.1"/>
+<ellipse class="st5" cx="390.8" cy="129.9" rx="12.1" ry="12.1"/>
+<ellipse transform="matrix(0.1602 -0.9871 0.9871 0.1602 162.6021 384.5251)" class="st6" cx="307.3" cy="96.7" rx="12.1" ry="12.1"/>
+<ellipse class="st7" cx="257.7" cy="154.8" rx="12.1" ry="12.1"/>
+<ellipse class="st7" cx="203.2" cy="185.9" rx="12.1" ry="12.1"/>
+<ellipse class="st5" cx="251" cy="99.5" rx="12.1" ry="12.1"/>
+<ellipse class="st7" cx="378.1" cy="171.6" rx="12.1" ry="12.1"/>
+<ellipse class="st7" cx="459.2" cy="161.5" rx="12.1" ry="12.1"/>
+<ellipse class="st7" cx="414.8" cy="251" rx="12.1" ry="12.1"/>
+<ellipse transform="matrix(0.1602 -0.9871 0.9871 0.1602 304.6593 1066.2458)" class="st6" cx="779" cy="354.1" rx="12.1" ry="12.1"/>
+<ellipse transform="matrix(0.1602 -0.9871 0.9871 0.1602 243.375 987.774)" class="st6" cx="702.2" cy="350.9" rx="12.1" ry="12.1"/>
+<ellipse transform="matrix(0.1602 -0.9871 0.9871 0.1602 281.5898 925.2044)" class="st6" cx="684.5" cy="297.1" rx="12.1" ry="12.1"/>
+<ellipse class="st7" cx="437.7" cy="334.8" rx="12.1" ry="12.1"/>
+<ellipse transform="matrix(0.4641 -0.8858 0.8858 0.4641 28.0778 602.5435)" class="st8" cx="512" cy="278.1" rx="12.1" ry="12.1"/>
+<ellipse class="st7" cx="362.4" cy="207.4" rx="12.1" ry="12.1"/>
+<ellipse transform="matrix(0.1602 -0.9871 0.9871 0.1602 246.8388 504.6695)" class="st6" cx="420" cy="107.3" rx="12.1" ry="12.1"/>
 </svg>

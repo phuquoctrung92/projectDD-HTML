@@ -8,7 +8,7 @@
 	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#E6E7E8;stroke:#FFFFFF;stroke-width:9.301216e-02;stroke-miterlimit:1.2402;}
 	.st3{fill:#E6E7E8;fill-opacity:0;}
 	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#E6E7E8;fill-opacity:0;}
-	.st5{fill:#004BBC;stroke:#BDCDE9;stroke-width:5;stroke-miterlimit:10;}
+	.st5{fill:#CE0D03;stroke:#FAE6C9;stroke-width:5.0004;stroke-miterlimit:10.0008;}
 </style>
 <g id="map_1_">
 	
@@ -8811,5 +8811,11 @@
 		</g>
 	</g>
 </g>
-<ellipse transform="matrix(0.1602 -0.9871 0.9871 0.1602 129.8814 769.0573)" class="st5" cx="516.9" cy="308.2" rx="12.1" ry="12.1"/>
+<ellipse transform="matrix(0.1602 -0.9871 0.9871 0.1602 327.1055 679.2795)" class="st5" cx="562.8" cy="147.4" rx="12.1" ry="12.1"/>
+<ellipse transform="matrix(0.1602 -0.9871 0.9871 0.1602 317.1135 580.9053)" class="st5" cx="499.9" cy="104.1" rx="12.1" ry="12.1"/>
+<ellipse transform="matrix(0.1602 -0.9871 0.9871 0.1602 230.513 524.2431)" class="st5" cx="423.3" cy="126.7" rx="12.1" ry="12.1"/>
+<ellipse transform="matrix(0.1602 -0.9871 0.9871 0.1602 249.9398 414.7236)" class="st5" cx="368.7" cy="60.5" rx="12.1" ry="12.1"/>
+<ellipse transform="matrix(0.1602 -0.9871 0.9871 0.1602 201.506 393.8229)" class="st5" cx="332.2" cy="78.5" rx="12.1" ry="12.1"/>
+<ellipse transform="matrix(0.1602 -0.9871 0.9871 0.1602 398.606 731.8001)" class="st5" cx="629.4" cy="131.6" rx="12.1" ry="12.1"/>
+<ellipse transform="matrix(0.1602 -0.9871 0.9871 0.1602 430.434 774.8868)" class="st5" cx="670.6" cy="134.5" rx="12.1" ry="12.1"/>
 </svg>
