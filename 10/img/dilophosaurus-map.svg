@@ -8780,9 +8780,7 @@
 		</circle>
 	</g>
 </g>
-<g id="dots">
-	<circle class="st5" cx="625" cy="131" r="12.1"/>
-	<circle class="st5" cx="602.3" cy="159.3" r="12.1"/>
-	<circle class="st5" cx="572.1" cy="87.1" r="12.1"/>
-</g>
+<circle class="st5" cx="160.8" cy="143.2" r="12.1"/>
+<circle class="st5" cx="142.2" cy="83" r="12.1"/>
+<circle class="st5" cx="216.7" cy="159.4" r="12.1"/>
 </svg>
