@@ -259,21 +259,21 @@ body {
   }
 }
 .content__detail img {
-  width: 1.2rem;
+  width: 1.4rem;
 }
 @media screen and (min-width: 360px) {
-  .content__detail img {
-    width: 1.4rem;
-  }
-}
-@media screen and (min-width: 446px) {
   .content__detail img {
     width: 1.6rem;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 446px) {
   .content__detail img {
     width: 1.8rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .content__detail img {
+    width: 2rem;
   }
 }
 .content__detail img + img {

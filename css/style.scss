@@ -242,15 +242,15 @@ body {
       }
     }
     img {
-      width: 1.2rem;
+      width: 1.4rem;
       @include bp(360px) {
-        width: 1.4rem;
-      }
-      @include bp(446px) {
         width: 1.6rem;
       }
-      @include bp(768px) {
+      @include bp(446px) {
         width: 1.8rem;
+      }
+      @include bp(768px) {
+        width: 2rem;
       }
       + img {
         margin-left: .1rem;
