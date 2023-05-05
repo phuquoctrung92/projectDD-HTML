@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 24.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 863.2 442.8" style="enable-background:new 0 0 863.2 442.8;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#E6E7E8;stroke:#FFFFFF;stroke-width:0.155;stroke-miterlimit:1.2402;}
@@ -8811,11 +8811,10 @@
 		</g>
 	</g>
 </g>
-<g id="dots_1_">
-	<g id="dots">
-		<circle class="st5" cx="350.2" cy="64.1" r="12.1"/>
-		<circle class="st5" cx="272.1" cy="114.6" r="12.1"/>
-		<circle class="st5" cx="148" cy="82.4" r="12.1"/>
-	</g>
-</g>
+<circle class="st5" cx="272.1" cy="114.6" r="12.1"/>
+<circle class="st5" cx="148" cy="82.4" r="12.1"/>
+<circle class="st5" cx="217.3" cy="92.7" r="12.1"/>
+<circle class="st5" cx="170.8" cy="117.4" r="12.1"/>
+<circle class="st5" cx="196.4" cy="135.5" r="12.1"/>
+<circle class="st5" cx="168.4" cy="151.5" r="12.1"/>
 </svg>
